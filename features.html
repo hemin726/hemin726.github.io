@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+</head>
+
+<body>
+</body>
+
+</html>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name='viewport' content='width=device-width, initial-scale=1.0,maximum-scale=1,minimum-scale=1,user-scalable=no'>
+    <!--先引入第三方的框架，在引入自己的-->
+    <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.css">
+
+    <!--引入less文件的时候，rel要等于 stylesheet/less -->
+    <!--<link rel="stylesheet/less" href="css/base.less">-->
+    <link rel="stylesheet" href="css/base.css">
+    <!--<link rel="stylesheet/less" href="css/index.less">-->
+    <link rel="stylesheet" href="css/features.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    <!--编译less文件-->
+    <!--引入less的临时编译js文件，这个文件是用来临时将less代码转换成css代码的-->
+    <!--<scripr src="lib/less/less.js"></scripr>-->
+</head>
+
+<body>
+    <!--主页的容器-->
+    <div class="layout">
+
+        <!--主页的头部区域-->
+        <header id="header">
+            <i class="icon-back"></i>
+            <h4>专题列表</h4>
+        </header>
+        <!--连载动漫列表-->
+        <section id="features">
+            <ul>
+                <li>
+                    <a href="#">
+                        <img src="images/lunbo1.jpg" alt="">
+                        <p>2016年七月新番</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="images/lunbo1.jpg" alt="">
+                        <p>2016年七月新番</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="images/lunbo1.jpg" alt="">
+                        <p>2016年七月新番</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="images/lunbo1.jpg" alt="">
+                        <p>2016年七月新番</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="images/lunbo1.jpg" alt="">
+                        <p>2016年七月新番</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="images/lunbo1.jpg" alt="">
+                        <p>2016年七月新番</p>
+                    </a>
+                </li>
+            </ul> 
+        </section>
+
+    </div>
+    <!---------------------------------------模板引擎-------------------------------------------->
+    <script type="text/html" id="featuresListTmp">
+        {{each list as value i}}
+            <ul>
+                <li>
+                    <a href="{{value.url}}">
+                            <img src="{{value.img}}" alt="">
+                            <p>{{value.title}}</p>
+                        </a>
+                </li>
+            </ul>
+        {{/each}}
+    </script>
+
+    <!--引入bootstrop的js的时候依赖jquery所以先引入jquery-->
+    <script src="lib/jquery/jquery.js"></script>
+    <script src="lib/bootstrap/js/bootstrap.js"></script>
+    <!--简洁语法的包-->
+    <script src="js/template.js"></script>
+    <!--原生语法的包-->
+    <!--<script src="js/template-native.js"></script>-->
+    <script src="js/features.js"></script>
+</body>
+
+</html>

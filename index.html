@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name='viewport' content='width=device-width, initial-scale=1.0,maximum-scale=1,minimum-scale=1,user-scalable=no'>
+    <!--先引入第三方的框架，在引入自己的-->
+    <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.css">
+
+    <!--引入less文件的时候，rel要等于 stylesheet/less -->
+    <!--<link rel="stylesheet/less" href="css/base.less">-->
+    <link rel="stylesheet" href="css/base.css">
+    <!--<link rel="stylesheet/less" href="css/index.less">-->
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    <!--编译less文件-->
+    <!--引入less的临时编译js文件，这个文件是用来临时将less代码转换成css代码的-->
+    <!--<script src="lib/less/less.js"></script>-->
+</head>
+
+<body>
+    <!--主页的容器-->
+    <div class="layout">
+        <!--主页容器的遮罩层-->
+        <div class="mask"></div> 
+        <!--主页的头部区域-->
+        <header id="header">
+            <i class="icon-menu"></i>
+            <h4>红旅动漫</h4>
+            <i class="icon-search"></i>
+        </header>
+        <!--主页轮播图容器-->
+        <section id="slide">
+            <!--轮播图容器-->
+            <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+                <!-- 小圆点 -->
+                <ol class="carousel-indicators">
+                    <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+                    <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+                    <!--<li data-target="#carousel-example-generic" data-slide-to="2"></li>-->
+                </ol>
+
+                <!-- 轮播图的轮播项 -->
+                <div class="carousel-inner" role="listbox">
+                    <!--每一个item就是一张轮播图-->
+                    <div class="item active">
+                        <!--<img src="http://192.168.112.112:8888/api/getlunbo" alt="...">-->
+                        <img src="images/l2.jpg" alt="...">
+                        <!--轮播图的标题-->
+                        <div class="carousel-caption">
+                            小姐姐带你爽飞天！
+                        </div>
+                    </div>
+                    <div class="item">
+                        <!--<img src="http://192.168.112.112:8888/api/getlunbo" alt="...">-->
+                        <img src="images/l1.jpg" alt="...">
+                        <div class="carousel-caption">
+                            距离发射时间还有30秒
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--主页的动漫tab栏容器-->
+        <section id="cartoom">
+            <div>
+                <!-- tab栏标题 -->
+                <ul class="nav nav-tabs" role="tablist">
+                    <!--data-type="1" 绑定和DOM强相关的数据 这个data-type就是对应这个标题的type -->
+                    <li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab" data-type="1">新增连载</a></li>
+                    <li role="presentation"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab" data-type="2">新增完结</a></li>
+                    <li role="presentation"><a href="#messages" aria-controls="messages" role="tab" data-toggle="tab" data-type="3">推送连载</a></li>
+                    <li role="presentation"><a href="#settings" aria-controls="settings" role="tab" data-toggle="tab" data-type="4">推荐完结</a></li>
+                </ul>
+
+                <!-- Tab 面板 -->
+                <div class="tab-content">
+                    <div role="tabpanel" class="tab-pane active" id="home">
+                        <ul>
+                            <li class="col-xs-6">
+                                <a href="#">
+                                    <img src="images/image16.jpg" alt=""  >
+                                    <span>连载至12集</span>
+                                </a>
+                            </li>
+                            <li class="col-xs-6">
+                                <a href="#">
+                                    <img src="images/image16.jpg" alt=""  >
+                                    <span>连载至12集</span>
+                                </a>
+                            </li>
+                            <li class="col-xs-6">
+                                <a href="#">
+                                    <img src="images/image16.jpg" alt=""  >
+                                    <span>连载至12集</span>
+                                </a>
+                            </li>
+                            <li class="col-xs-6">
+                                <a href="#">
+                                    <img src="images/image16.jpg" alt=""  >
+                                    <span>连载至12集</span>
+                                </a>
+                            </li>
+                            <li class="col-xs-6">
+                                <a href="#">
+                                    <img src="images/image16.jpg" alt=""  >
+                                    <span>连载至12集</span>
+                                </a>
+                            </li>
+                            <li class="col-xs-6">
+                                <a href="#">
+                                    <img src="images/image16.jpg" alt=""  >
+                                    <span>连载至12集</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div role="tabpanel" class="tab-pane" id="profile">
+                        <ul>
+                            <li class="col-xs-6">
+                                <a href="#">
+                                    <img src="images/image20.jpg" alt="">
+                                    <span>12集全</span>
+                                </a>
+                            </li>
+                            <li class="col-xs-6">
+                                <a href="#">
+                                    <img src="images/image20.jpg" alt="">
+                                    <span>12集全</span>
+                                </a>
+                            </li>
+                            <li class="col-xs-6">
+                                <a href="#">
+                                    <img src="images/image20.jpg" alt="">
+                                    <span>12集全</span>
+                                </a>
+                            </li>
+                            <li class="col-xs-6">
+                                <a href="#">
+                                    <img src="images/image20.jpg" alt="">
+                                    <span>12集全</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div role="tabpanel" class="tab-pane" id="messages">
+                        <ul>
+                            <li class="col-xs-6">
+                                <a href="#">
+                                    <img src="images/image34.jpg" alt="">
+                                    <span>连载至12集</span>
+                                </a>
+                            </li>
+                            <li class="col-xs-6">
+                                <a href="#">
+                                    <img src="images/image34.jpg" alt="">
+                                    <span>连载至12集</span>
+                                </a>
+                            </li>
+                            <li class="col-xs-6">
+                                <a href="#">
+                                    <img src="images/image34.jpg" alt="">
+                                    <span>连载至12集</span>
+                                </a>
+                            </li>
+                            <li class="col-xs-6">
+                                <a href="#">
+                                    <img src="images/image34.jpg" alt="">
+                                    <span>连载至12集</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div role="tabpanel" class="tab-pane" id="settings">
+                        <ul>
+                            <li class="col-xs-6">
+                                <a href="#">
+                                    <img src="images/image40.jpg" alt="">
+                                    <span>34集全</span>
+                                </a>
+                            </li>
+                            <li class="col-xs-6">
+                                <a href="#">
+                                    <img src="images/image40.jpg" alt="">
+                                    <span>34集全</span>
+                                </a>
+                            </li>
+                            <li class="col-xs-6">
+                                <a href="#">
+                                    <img src="images/image40.jpg" alt="">
+                                    <span>34集全</span>
+                                </a>
+                            </li>
+                            <li class="col-xs-6">
+                                <a href="#">
+                                    <img src="images/image40.jpg" alt="">
+                                    <span>34集全</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <!--左侧的导航菜单-->
+    <div class="left-menu">
+        <ul class="list-group">
+            <li class="list-group-item">
+                <a href="#">
+                    <img src="images/logo.png" alt="">
+                </a>
+            </li>
+            <li class="list-group-item">
+                <a href="#">连载动漫</a>
+            </li>
+            <li class="list-group-item">
+                <a href="#">专题列表</a>
+            </li>
+            <li class="list-group-item">
+                <a href="#">关于</a>
+            </li>
+        </ul>
+    </div>
+
+<!--------------------------------------- 模板引擎 ------------------------------------------>
+
+    <!--轮播图的每一张图片的模板-->
+    <script type="text/html" id="slideTmp">
+        {{each list as value i}}
+        <div class="item">
+            <img src="{{value.img}}" alt="...">
+            <div class="carousel-caption">
+                {{value.title}}
+            </div>
+        </div>
+        {{/each}}
+    </script>
+    <!--原生语法-->
+    <!--<script type="text/html" id="slideTmp">
+        <% for(var i=0; i < list.length; i++){%>
+        <div class="item">
+            <img src="<%=list[i].img%>" alt="...">
+            <div class="carousel-caption">
+                <%= list[i].title %>
+            </div>
+        </div>
+        <%}%>
+    </script>-->
+
+    <!--动漫列表ID-->
+    <script type="text/html" id="cartoonListTmp">
+        <ul>
+            {{each list as value i}}
+            <li class="col-xs-6">
+                <a href="">
+                    <img src="" alt="" data-original="{{value.img}}">
+                    <span>{{value.update}}</span>
+                </a>
+            </li>
+            {{/each}}
+        </ul>
+    </script>
+
+    <!--引入bootstrop的js的时候依赖jquery所以先引入jquery-->
+    <script src="lib/jquery/jquery.js"></script>
+    <script src="jq-Plugins/jquery.lazyload.js"></script>
+    
+    <script src="lib/bootstrap/js/bootstrap.js"></script>
+    <!--简洁语法的包-->
+    <script src="js/template.js"></script>
+    <!--原生语法的包-->
+    <!--<script src="js/template-native.js"></script>-->
+    <script src="js/index.js"></script>
+    <!--<script src="js/jquery-1.12.2.js"></script>-->
+</body>
+
+</html>
